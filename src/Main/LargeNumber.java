@@ -4,11 +4,11 @@ public class LargeNumber {
 //    public int size;
 //    public int[] zahl;
 
-    //    LargeNumber(int size2, int[] arr){
-//        size = size2;
-//        zahl = new int[size];
-//        zahl = arr;
-//    }
+//        LargeNumber(int size2, int[] arr){
+//            size = size2;
+//            zahl = new int[size];
+//            zahl = arr;
+//        }
     public int[] sum(int[] nr1, int[] nr2) {
         int[] result = new int[nr1.length];
         int temp = 0;
@@ -49,7 +49,7 @@ public class LargeNumber {
         return result;
     }
 
-    public int[] mul(int[] nr1,int nr2) {
+    public int[] mul(int[] nr1, int nr2) {
         int[] result = new int[nr1.length];
         int temp = 0;
         for (int i = nr1.length - 1; i >= 0; i--){

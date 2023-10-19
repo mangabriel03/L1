@@ -8,10 +8,17 @@
 
 package Main;
 
+import Tests.TestRunner;
+
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
+        TestRunner testRunner = new TestRunner();
+        testRunner.run();
+
+
         NotenProzessor notenProzessor = new NotenProzessor();
 
         int[] noten = new int[] { 10, 20, 30, 39, 47, 48, 60 };
@@ -21,6 +28,7 @@ public class Main {
         System.out.println(Arrays.toString(notenProzessor.abgerundeteNote(noten)));
         System.out.println(notenProzessor.Maximale(noten));
         Operations op = new Operations();
+        //    public double[] arr = {1,2.5,4.2,4.3,9,1.1,13,100.3,7.4};
         System.out.println(op.getMax());
         System.out.println(op.getMin());
         System.out.println(op.minSum());
@@ -31,8 +39,8 @@ public class Main {
         System.out.println(Arrays.toString(nr1.sum(nr1Array, nr2Array)));
         System.out.println(Arrays.toString(nr1.dif(nr1Array, nr2Array)));
         int nr3 = 3;
-        System.out.println(Arrays.toString(nr1.mul(nr1Array, nr3)));
-        System.out.println(Arrays.toString(nr1.mul(nr2Array, nr3)));
+        System.out.println(Arrays.toString(nr1.div(nr1Array, nr3)));
+        System.out.println(Arrays.toString(nr1.div(nr2Array, nr3)));
         int[] n = {1,3,9};
         System.out.println(Arrays.toString(nr1.div(n,nr3)));
         System.out.println(Arrays.toString(nr1.div(nr1Array,nr3)));
