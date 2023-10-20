@@ -6,20 +6,29 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class LargeNumberTest {
+    LargeNumber lg = new LargeNumber();
+    int[] nr1 = new int[] {1,2,3,6};
+    int[] nr2 = new int[] {5,3,8,9};
+
+    private int[] arrayException;
 
     @Test
     public void sumTest(){
-        LargeNumber lg = new LargeNumber();
-        int[] nr1 = new int[] {1,2,3,6};
-        int[] nr2 = new int[] {5,3,8,9};
+//        LargeNumber lg = new LargeNumber();
+//        int[] nr1 = new int[] {1,2,3,6};
+//        int[] nr2 = new int[] {5,3,8,9};
         int[] sum = {6,6,2,5};
         assertEquals(Arrays.toString(sum), Arrays.toString(lg.sum(nr1,nr2)) );
-        int[] sumGresita = {1,1,1,1};
-        try{
-            assertEquals((Arrays.toString(sumGresita)),Arrays.toString(lg.sum(nr1,nr2)));
-        } catch (AssertionError e ){
-            System.out.println(e.getMessage());
-        }
+//        int[] sumGresita = {1,1,1,1};
+//        try{
+//            assertEquals((Arrays.toString(sumGresita)),Arrays.toString(lg.sum(nr1,nr2)));
+//        } catch (AssertionError e ){
+//            System.out.println(e.getMessage());
+//        }
+    }
+    @Test
+    public void sumExceptionTest(){
+        assertThrows(IllegalArgumentException.class, () -> lg.sum(nr1, arrayException));
     }
 
     @Test

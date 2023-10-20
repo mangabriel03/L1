@@ -12,11 +12,11 @@ import Tests.TestRunner;
 
 import java.util.Arrays;
 
+
 public class Main {
     public static void main(String[] args) {
 
-        TestRunner testRunner = new TestRunner();
-        testRunner.run();
+        TestRunner.run();
 
 
         NotenProzessor notenProzessor = new NotenProzessor();

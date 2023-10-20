@@ -18,7 +18,7 @@ public class Operations {
     }
 
     public double getMin(){
-        double min = 100000;
+        double min = Integer.MAX_VALUE;
         for(int i = 0;i< length;i++){
             if(min > arr[i])
                 min = arr[i];
