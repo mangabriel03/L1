@@ -10,6 +10,8 @@ public class LargeNumber {
 //            zahl = arr;
 //        }
     public int[] sum(int[] nr1, int[] nr2) {
+        if (nr2.length == 0)
+            throw new IllegalArgumentException();
         int[] result = new int[nr1.length];
         int temp = 0;
         for (int i = nr1.length - 1; i >= 0; i--) {
@@ -32,6 +34,8 @@ public class LargeNumber {
     }
 
     public int[] dif(int[] nr1, int[] nr2) {
+        if (nr2.length == 0)
+            throw new IllegalArgumentException();
         int[] result = new int[nr1.length];
         int temp = 0;
         int dif = 0;
@@ -50,6 +54,8 @@ public class LargeNumber {
     }
 
     public int[] mul(int[] nr1, int nr2) {
+        if (nr2 < 0)
+            throw new IllegalArgumentException();
         int[] result = new int[nr1.length];
         int temp = 0;
         for (int i = nr1.length - 1; i >= 0; i--){
@@ -67,6 +73,8 @@ public class LargeNumber {
     }
 
     public int[] div(int[] nr1, int nr2) {
+        if (nr2 == 0)
+            throw new IllegalArgumentException();
         int[] result = new int[nr1.length];
         int temp = 0;
         for (int i = 0; i <= nr1.length - 1; i++){

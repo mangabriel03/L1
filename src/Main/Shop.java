@@ -4,11 +4,15 @@ import java.util.Arrays;
 
 public class Shop {
     public int billigsteTastatur(int[] tastaturen){
+        if (tastaturen.length == 0)
+            throw new IllegalArgumentException();
         Arrays.sort(tastaturen);
         return tastaturen[0];
     }
 
     public int teuersteGegenstand(int[] tastaturen, int[] usb){
+        if (usb.length == 0 || tastaturen.length == 0)
+            throw new IllegalArgumentException();
         int maxTastaturen = -1;
         int maxUsb = -1;
         for (int i = 0; i <= tastaturen.length-1; i++)
@@ -23,6 +27,8 @@ public class Shop {
     }
 
     public int teuersteUsb(int[] usb, int budget){
+        if (usb.length == 0 || budget <= 0)
+            throw new IllegalArgumentException();
         Arrays.sort(usb);
         int teuerste = 0;
         for (int i = usb.length - 1; i >= 0; i--)
@@ -34,6 +40,8 @@ public class Shop {
     }
 
     public int geldbetrag(int[] tastaturen, int[] usb, int budget){
+        if (tastaturen.length == 0 || usb.length == 0 || budget <= 0)
+            throw new IllegalArgumentException();
         Arrays.sort(tastaturen);
         Arrays.sort(usb);
         int max = 0;

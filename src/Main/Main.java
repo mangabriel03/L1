@@ -29,10 +29,10 @@ public class Main {
         System.out.println(notenProzessor.Maximale(noten));
         Operations op = new Operations();
         //    public double[] arr = {1,2.5,4.2,4.3,9,1.1,13,100.3,7.4};
-        System.out.println(op.getMax());
-        System.out.println(op.getMin());
-        System.out.println(op.minSum());
-        System.out.println(op.maxSum());
+        System.out.println(op.getMax(op.arr));
+        System.out.println(op.getMin(op.arr));
+        System.out.println(op.minSum(op.arr));
+        System.out.println(op.maxSum(op.arr));
         int[] nr1Array = {1,0,3,0,5,8,0,7,0,1};
         int[] nr2Array = {5,0,0,9,5,3,1,4,1,2};
         LargeNumber nr1 = new LargeNumber();

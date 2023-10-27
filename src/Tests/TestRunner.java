@@ -22,6 +22,7 @@ public class TestRunner {
             largeNumberTest.mulTest();
             largeNumberTest.difTest();
 
+
             ShopTest shopTest = new ShopTest();
             shopTest.billigsteTastaturTest();;
             shopTest.teuersteGegenstandTest();

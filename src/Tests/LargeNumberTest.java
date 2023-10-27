@@ -10,7 +10,38 @@ public class LargeNumberTest {
     int[] nr1 = new int[] {1,2,3,6};
     int[] nr2 = new int[] {5,3,8,9};
 
+    int nr3 = 3;
+
     private int[] arrayException;
+
+    @Test
+    public void testSumWithInvalidData() {
+        int[] nr1 = {1, 2, 3};
+        int[] nr2 = {};
+        assertThrows(IllegalArgumentException.class, () -> lg.sum(nr1, nr2));
+    }
+
+    @Test
+    public void testDifWithInvalidData() {
+        int[] nr1 = {5, 6, 7, 8};
+        int[] nr2 = {};
+        assertThrows(IllegalArgumentException.class, () -> lg.dif(nr1, nr2));
+    }
+
+    @Test
+    public void testMulWithInvalidData() {
+        int[] nr1 = {2, 3, 4, 5};
+        int nr2 = -2;
+        assertThrows(IllegalArgumentException.class, () -> lg.mul(nr1, nr2));
+    }
+
+    @Test
+    public void testDivWithInvalidData() {
+        int[] nr1 = {6, 7, 8, 9};
+        int nr2 = 0;
+        assertThrows(IllegalArgumentException.class, () -> lg.div(nr1, nr2));
+    }
+
 
     @Test
     public void sumTest(){
@@ -25,10 +56,6 @@ public class LargeNumberTest {
 //        } catch (AssertionError e ){
 //            System.out.println(e.getMessage());
 //        }
-    }
-    @Test
-    public void sumExceptionTest(){
-        assertThrows(IllegalArgumentException.class, () -> lg.sum(nr1, arrayException));
     }
 
     @Test

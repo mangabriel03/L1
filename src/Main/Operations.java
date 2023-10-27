@@ -8,7 +8,9 @@ public class Operations {
         this.arr = arr;
     }
 
-    public double getMax(){
+    public double getMax( double[] arr){
+        if (arr.length == 0)
+            throw new RuntimeException();
         double max = 0;
         for(int i = 0;i< length;i++){
             if(max < arr[i])
@@ -17,29 +19,35 @@ public class Operations {
         return max;
     }
 
-    public double getMin(){
+    public double getMin(double[] arr){
+        if (arr.length == 0)
+            throw new RuntimeException();
         double min = Integer.MAX_VALUE;
         for(int i = 0;i< length;i++){
-            if(min > arr[i])
-                min = arr[i];
+            if(min > this.arr[i])
+                min = this.arr[i];
         }
         return min;
     }
 
-    public double maxSum(){
+    public double maxSum(double[] arr){
+        if (arr.length == 0)
+            throw new RuntimeException();
         double sum=0;
         for(int i = 0;i< length;i++){
-            if(arr[i]!=getMin())
-                sum = sum+ arr[i];
+            if(this.arr[i]!=getMin(arr))
+                sum = sum+ this.arr[i];
         }
         return sum;
     }
 
-    public double minSum(){
+    public double minSum(double[] arr){
+        if (arr.length == 0)
+            throw new RuntimeException();
         double sum=0;
         for(int i = 0;i< length;i++){
-            if(arr[i]!=getMax())
-                sum = sum+ arr[i];
+            if(this.arr[i]!=getMax(arr))
+                sum = sum+ this.arr[i];
         }
         return sum;
     }
