@@ -56,6 +56,8 @@ public class NotenProzessor {
     }
 
     public int Durchschnittswert  (int[] note){
+        if (note.length == 0)
+            throw new RuntimeException();
         int sum = 0;
         for (int i = 0; i < note.length; i ++){
             sum = sum + note[i];
@@ -64,6 +66,8 @@ public class NotenProzessor {
     }
 
     public int[] abgerundeteNote (int [] note) {
+        if (note.length == 0)
+            throw new RuntimeException();
         int[] abgerundeteNoten = new int[note.length];
 
         for (int i = 0; i < note.length; i++) {
@@ -74,6 +78,8 @@ public class NotenProzessor {
     }
 
     public int Maximale (int[] note){
+        if (note.length == 0)
+            throw new RuntimeException();
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < note.length; i++)

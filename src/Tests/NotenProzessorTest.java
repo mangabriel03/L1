@@ -35,6 +35,23 @@ class NotenProzessorTest {
         int newElement = -5;
         assertThrows(RuntimeException.class, () -> notenProzessor.addToArray(originalArray, newElement));
     }
+    @Test
+    public void testDurchschnittswertException(){
+        int[] note = {};
+        assertThrows(RuntimeException.class, () ->notenProzessor.Durchschnittswert(note));
+    }
+
+    @Test
+    public void testAbgerundeteException(){
+        int[] note = {};
+        assertThrows(RuntimeException.class, () ->notenProzessor.abgerundeteNote(note));
+    }
+
+    @Test
+    public void testMaximaleException(){
+        int[] note = {};
+        assertThrows(RuntimeException.class, () ->notenProzessor.Maximale(note));
+    }
 
 
     public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
