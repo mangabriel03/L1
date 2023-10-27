@@ -10,6 +10,9 @@ public class NotenProzessor {
 
     public int[] nichtAusreichendeNoten(int[] note) {
 
+        if (note.length == 0)
+            throw new RuntimeException();
+
         for (int i = 0; i < note.length; i++) {
             if (note[i] < 0 || note[i] > 100) {
                 System.out.println("Noten soll zwischen 0 und 100 sein.");
@@ -28,6 +31,8 @@ public class NotenProzessor {
     }
 
     public int round(int note) {
+        if (note <= 0)
+            throw new RuntimeException();
         if (note < 38) {
             return note;
         } else {
@@ -40,6 +45,8 @@ public class NotenProzessor {
     }
 
     public int[] addToArray(int[] original, int newElement) {
+        if (original.length == 0 || newElement <= 0)
+            throw new RuntimeException();
         int[] result = new int[original.length + 1];
         for (int i = 0; i < original.length; i++) {
             result[i] = original[i];

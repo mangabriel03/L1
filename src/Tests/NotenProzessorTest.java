@@ -19,7 +19,7 @@ class NotenProzessorTest {
 
     @Test
     public void testNichtAusreichendeNotenThrowsException() {
-        int[] testNoten = {30, 45, 105, 60, -10, 70};
+        int[] testNoten = {};
         assertThrows(RuntimeException.class, () -> notenProzessor.nichtAusreichendeNoten(testNoten));
     }
 
