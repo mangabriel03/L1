@@ -2,7 +2,11 @@ package Main;
 
 //package com.example.main;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 public class NotenProzessor {
+
 
     public int[] nichtAusreichendeNoten(int[] note) {
 

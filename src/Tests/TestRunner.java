@@ -1,17 +1,18 @@
 package Tests;
 
+
 public class TestRunner {
 
     public static void run(){
 
             OperationsTest operations = new OperationsTest();
-            operations.getMaxTest();
+            operations.testGetMax();
             System.out.println("Operations test max done!! yuhuuu");
-            operations.getMinTest();
+            operations.testGetMin();
             System.out.println("Operations test min done");
-            operations.maxSumTest();
+            operations.testMaxSum();
             System.out.println("Op test sum max done");
-            operations.minSumTest();
+            operations.testMinSum();
             System.out.println("op test sum min done");
 
 

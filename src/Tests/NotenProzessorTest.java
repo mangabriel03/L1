@@ -2,11 +2,40 @@ package Tests;
 //package com.example.test;
 import Main.NotenProzessor;
 import java.util.ArrayList;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class NotenProzessorTest {
+
+    private NotenProzessor notenProzessor;
+
+    @BeforeEach
+    public void setUp() {
+        notenProzessor = new NotenProzessor();
+    }
+
+    @Test
+    public void testNichtAusreichendeNotenThrowsException() {
+        int[] testNoten = {30, 45, 105, 60, -10, 70};
+        assertThrows(RuntimeException.class, () -> notenProzessor.nichtAusreichendeNoten(testNoten));
+    }
+
+    @Test
+    public void testRoundThrowsException() {
+        int testNote = -5;
+        assertThrows(RuntimeException.class, () -> notenProzessor.round(testNote));
+    }
+
+    @Test
+    public void testAddToArrayThrowsException() {
+        int[] originalArray = {10, 20, 30};
+        int newElement = -5;
+        assertThrows(RuntimeException.class, () -> notenProzessor.addToArray(originalArray, newElement));
+    }
+
 
     public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
 
